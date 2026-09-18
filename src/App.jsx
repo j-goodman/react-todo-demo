@@ -1,6 +1,6 @@
 import { useState } from 'react'
-// import AddTask from './AddTask'
-// import TaskList from './TaskList'
+import AddTask from './AddTask'
+import TaskList from './TaskList'
 
 let nextId = 3
 const initialTasks = [
@@ -26,7 +26,9 @@ function App() {
 
   return (
     <>
-      <h1>Task List!</h1>
+      <h2>Task List!</h2>
+      <AddTask onAddTask={handleAddTask}/>
+      <TaskList tasks={tasks} onDeleteTask={handleDeleteTask}/>
     </>
   )
 }
